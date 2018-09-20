@@ -6,6 +6,10 @@
 　しー-Ｊ
 </code></pre>
 
+# HerokuのURLだよ!!
+https://chaahan-tukuruyo.herokuapp.com/
+
+# 以下テンプレだよ!!
 > A Vue.js project
 
 ## Build Setup
