@@ -2,16 +2,21 @@
     <div id="app">
         <ul>
             <li v-for="item in list" :key="item">
-                <button @click="selectMenu(item)">{{ item }}</button>
+                <a class="button" @click="selectMenu(item)">{{ item }}</a>
             </li>
         </ul>
-        <button v-if="order != ''" type="button" @click="decisionOrder()">
-            <font size="5" color="#333399">注文確定</font>
-        </button>
-        <img v-if="image != ''" v-bind:src="image"  width="300" height="200"/>
-        <br>
+        <a class="button" v-if="order != ''" type="button" @click="decisionOrder()">
+            <span style="font-size:150%; color:#333399;">注文確定</span>
+        </a>
+
+        <div>
+            <img v-if="image != ''" v-bind:src="image" width="300" height="300"/>
+        </div>
         {{ message }}
-        <p v-html="aa"></p>
+
+        <div class="div_aa">
+            <p class="p_aa" v-html="aa"></p>
+        </div>
     </div>
 </template>
 
@@ -24,7 +29,7 @@ export default {
       order: '',
       list: ['ラーメン', 'チャーハン'],
       message: '何食べたい？',
-      aa: '　 ∧,,∧ </br>' +
+      aa: '　　∧,,∧ </br>' +
         '　 ( ´・ω・）</br>' +
         '　 /　　 ｏ━ヽニニフ </br>' +
         '　 しー-Ｊ</br>',
@@ -139,13 +144,13 @@ export default {
       this.order = key
       this.message = key + 'にする？'
       this.aa =
-        '　 ∧,,∧ </br>' +
+        '　 　∧,,∧ </br>' +
         '　 ( ´・ω・）</br>' +
         '　 /　　 ｏ━ヽニニフ </br>' +
         '　 しー-Ｊ</br>'
     },
     decisionOrder: function () {
-      if (this.order = this.list[0]) {
+      if (this.order === this.list[0]) {
         this.aa = ''
         let ramen_no = Math.floor(Math.random() * 100)
         this.message = this.ramen_list[ramen_no][0]
@@ -187,5 +192,26 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.div_aa {
+    display: flex;
+    justify-content: center;
+}
+
+.p_aa {
+    text-align: left;
+}
+
+.button {
+    -webkit-appearance: none;
+    border-radius: 0;
+    display: inline-block;
+    padding: .75em 4em;
+    border: 2px solid #333;
+    border-radius: 3em .5em 2em .5em/.4em 2em .5em 3em;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
 }
 </style>
