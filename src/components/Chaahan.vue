@@ -15,10 +15,7 @@
         {{ message }}
 
         <ul id="wrap">
-            <li></li>
-            <li></li>
             <li><p style="text-align: left;" v-html="aa"></p></li>
-            <li></li>
         </ul>
     </div>
 </template>
