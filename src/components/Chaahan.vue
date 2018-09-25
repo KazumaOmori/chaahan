@@ -17,9 +17,6 @@
         <div class="div_aa">
             <p class="p_aa" v-html="aa"></p>
         </div>
-        <!--<ul id="wrap">-->
-            <!--<li><p style="text-align: left;" v-html="aa"></p></li>-->
-        <!--</ul>-->
     </div>
 </template>
 
