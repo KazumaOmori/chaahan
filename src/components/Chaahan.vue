@@ -198,10 +198,8 @@ a {
 }
 
 .div_aa {
-    /*border: 1px solid #aaa;*/
-    width: 250px;
-    text-align: center;
-    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .p_aa {
